@@ -1,0 +1,39 @@
+<body>
+    <section class="desktop">
+        <div class="left">
+            <img src="./assets/img/drink.png" alt="Logo">
+        </div>
+        <div class="right">
+            <div class="itens">
+                <p>TEXTO 1</p>
+                <p>TEXTO 2</p>
+                <p>TEXTO 3</p>
+            </div>
+            <div class="buttons">
+                <div class="button">LOGIN</div>
+                <div class="button">REGISTRAR</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile">
+        <div class="left">
+            <img src="./assets/img/drink.png" alt="Logo">
+        </div>
+        <div class="all">
+            <img (click)="toggleItems()" [src]="showItems ? './assets/img/interface.png' : './assets/img/close.png'">
+            <div class="right">
+                <div *ngIf="showItems" class="itens">
+                    <p>TEXTO 1</p>
+                    <p>TEXTO 2</p>
+                    <p>TEXTO 3</p>
+                </div>
+                <div *ngIf="showItems" class="buttons">
+                    <div class="button">LOGIN</div>
+                    <div class="button">REGISTRAR</div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+</body>

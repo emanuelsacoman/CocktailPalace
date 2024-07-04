@@ -1,0 +1,138 @@
+body{
+    color: #e4e8eb;
+}
+
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2vw;
+    background-color: #505050;
+    height: fit-content;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+
+    img{
+        width: clamp(45px, 5vw, 60px);
+    }
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.itens{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    p{
+        font-size: clamp(12px, 3vw, 18px);
+        cursor: pointer;
+    }
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.button{
+    background-color: #f05464;
+    padding: clamp(3px, 3vw, 10px);
+    border-radius: 5px;
+    font-size: clamp(12px, 3vw, 18px);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e44f5e;
+}
+
+@media screen and (max-width: 470px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 2vw;
+        background-color: #505050;
+        height: fit-content;
+    }
+    
+    .left img {
+        width: clamp(45px, 5vw, 60px);
+    }
+
+    .all{
+        position: relative;
+    }
+    
+    .right {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+        background-color: #6d6d6d33;
+    }
+
+    .itens{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .itens p {
+        margin: 5px 0;
+    }
+
+    .all{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        img{
+            width: clamp(30px, 5vw, 100px);
+        }
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        
+    }
+
+    .button {
+        background-color: #f05464;
+        color: #e4e8eb;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right > *{
+        width: 100%;
+    }
+    
+}
