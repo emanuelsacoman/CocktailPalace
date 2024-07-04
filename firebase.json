@@ -1,24 +1,11 @@
 {
   "hosting": {
     "site": "cocktailpalace",
-    "source": ".",
+    "public": "dist/cocktail",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt"
-      }
-    ],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    ]
   }
 }
