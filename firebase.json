@@ -1,7 +1,6 @@
 {
   "hosting": {
     "site": "cocktailpalace",
-    "public": "dist/cocktail",
     "source": ".",
     "ignore": [
       "firebase.json",
