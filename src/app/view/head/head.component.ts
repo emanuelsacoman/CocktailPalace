@@ -11,4 +11,8 @@ export class HeadComponent {
   toggleItems() {
     this.showItems = !this.showItems;
   }
+
+  goToGithub(){
+    window.open('https://github.com/emanuelsacoman/Cocktail', '_blank');
+  }
 }

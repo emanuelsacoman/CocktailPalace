@@ -1,15 +1,41 @@
 <body>
     <div class="top">
-        <div class="toptext">
-            <h1>COCKTAIL</h1>
-            <p>Tudo que você precisa saber!</p>
-        </div>
-        <div class="searchitens">
-            <input type="text" placeholder="Buscar">
-            <div class="itens">
-                <div class="itema itemtop">Aaaaa</div>
-                <div class="itemb itemtop">Bbbbb</div>
-            </div>
-        </div>
+      <div class="toptext">
+        <h1><span>COCKTAIL</span> PALACE</h1>
+        <p>Tudo que você precisa saber!</p>
+      </div>
+      <div class="searchitens">
+        <input type="text" placeholder="Buscar" (input)="search($event)">
+      </div>
     </div>
-</body>
+    <main>
+        <div class="main">
+          <ng-container *ngFor="let cocktail of cocktailToShow">
+            <div class="card" *ngIf="cocktail && cocktail.strDrinkThumb" (click)="showCocktailDetails(cocktail)">
+              <img [src]="cocktail.strDrinkThumb" alt="Imagem do Cocktail">
+              <p class="title">{{ cocktail.strDrink }}</p>
+            </div>
+          </ng-container>
+        </div>
+      </main>       
+    
+    <!-- Detalhes do Cocktail -->
+    <div class="cocktail-details" *ngIf="selectedCocktail">
+        <div class="cocktail-details-container">
+          <div class="cocktail-details-content">
+            <img class="cocktail-image" [src]="selectedCocktail.strDrinkThumb" alt="Imagem do Cocktail">
+            <div class="cocktail-info">
+              <h2>{{ selectedCocktail.strDrink }}</h2>
+              <p><strong>Ingredientes:</strong></p>
+              <ul>
+                <li *ngFor="let ingredient of selectedCocktail.ingredients">
+                  {{ ingredient }}
+                </li>
+              </ul>
+              <button (click)="closeCocktailDetails()">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  

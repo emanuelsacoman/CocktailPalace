@@ -1,18 +1,37 @@
 body{
     background-color: #606060;
-    height: 100vh;
+    min-height: 90vh;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
 }
 
 .top{
     display: flex;
     flex-direction: column;
-    padding: 1.3rem;
     gap: 1rem;
 
     .toptext{
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
+        color: #fff;
+
+        h1{
+            font-size: clamp(16px, 8vw, 30px);
+        }
+        span{
+            color: #f05464;
+            text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+        }
+        p{
+            font-size: clamp(12px, 3vw, 16px);
+        }
     }
 
     .searchitens{
@@ -59,6 +78,130 @@ body{
     }
 }
 
+main{
+    background-color: #8686864d;
+    width: 100%;
+    min-height: 10vh;
+    border-radius: 5px;
+    
+    .main{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-basis: auto;
+        justify-content: center;
+
+        .card{
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 200px;
+            max-width: 300px;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+
+            .title{
+                padding: 15px;
+                font-size: 18px;
+                font-size: clamp(16px, 8vw, 18px);
+                font-weight: bold;
+                color: #333;
+            }
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.cocktail-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61, 61, 61, 0.8);
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cocktail-details-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .cocktail-details-content {
+    display: flex;
+  }
+  
+  .cocktail-image {
+    max-width: 300px; 
+    height: auto; 
+    margin-right: 20px;
+  }
+  
+  .cocktail-info {
+    flex: 1; 
+  }
+  
+  .cocktail-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cocktail-details p {
+    margin-bottom: 5px;
+  }
+  
+  .cocktail-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cocktail-details ul li {
+    margin-bottom: 5px;
+  }
+  
+  .cocktail-details button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .cocktail-details button:hover {
+    background-color: #45a049;
+  }
+  
+  
+
 @media screen and (max-width: 470px){
     .top{
         .searchitens{
@@ -78,4 +221,19 @@ body{
             }
         }
     }
+
+    main{
+        .main{
+            flex-basis: auto;
+
+            .card{
+                flex: 1 1 100px;
+            }
+        }
+    }
+
+    .cocktail-details-content {
+        display: flex;
+        flex-direction: column;
+      }
 }
