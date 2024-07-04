@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "cocktailpalace",
+    "public": "dist/cocktail",
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}
