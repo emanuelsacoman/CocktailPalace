@@ -8,8 +8,8 @@
             <img src="./assets/img/drink.png" alt="Logo">
         </div>
         <div class="right">
-            <p>HOME</p>
-            <p>COCKTAILS</p>
+            <p (click)="home()">HOME</p>
+            <p (click)="cocktails()">COCKTAILS</p>
             <div class="buttons">
                 <div class="button" (click)="goToGithub()">
                     <i class="fab fa-github"></i> AUTOR
@@ -26,8 +26,8 @@
             <img (click)="toggleItems()" [src]="showItems ? './assets/img/close.png' : './assets/img/interface.png'">
             <div class="right">
                 <div class="path" *ngIf="showItems">
-                    <p>HOME</p>
-                    <p>COCKTAILS</p>
+                    <p (click)="home()">HOME</p>
+                    <p (click)="cocktails()">COCKTAILS</p>
                 </div>
                 <div *ngIf="showItems" class="buttons">
                     <div class="button" (click)="goToGithub()">

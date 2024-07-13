@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-head',
@@ -8,11 +9,23 @@ import { Component } from '@angular/core';
 export class HeadComponent {
   showItems = false;
 
+  constructor(private route: Router){
+
+  }
+
   toggleItems() {
     this.showItems = !this.showItems;
   }
 
   goToGithub(){
     window.open('https://github.com/emanuelsacoman/Cocktail', '_blank');
+  }
+
+  home(){
+    this.route.navigate(['']);
+  }
+
+  cocktails(){
+    this.route.navigate(['/cocktails']);
   }
 }

@@ -8,12 +8,14 @@ import { HeadComponent } from './view/head/head.component';
 import { environment } from 'src/environments/environment';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { HomeComponent } from './view/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    HeadComponent
+    HeadComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
