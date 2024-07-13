@@ -18,10 +18,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
 
     :is(img){
         width: clamp(45px, 5vw, 60px);
+        cursor: pointer;
     }
 }
 
@@ -29,6 +29,14 @@ body{
     display: flex;
     align-items: center;
     gap: 2vw;
+
+    :is(p){
+        cursor: pointer;
+    }
+
+    :is(p):hover{
+        color: #e4e8ebd2;
+    }
 }
 
 .itens{

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './view/index/index.component';
 import { HeadComponent } from './view/head/head.component';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 
