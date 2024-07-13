@@ -21,21 +21,29 @@
     
     <!-- Detalhes do Cocktail -->
     <div class="cocktail-details" *ngIf="selectedCocktail">
-        <div class="cocktail-details-container">
-          <div class="cocktail-details-content">
-            <img class="cocktail-image" [src]="selectedCocktail.strDrinkThumb" alt="Imagem do Cocktail">
-            <div class="cocktail-info">
-              <h2>{{ selectedCocktail.strDrink }}</h2>
-              <p><strong>Ingredientes:</strong></p>
-              <ul>
-                <li *ngFor="let ingredient of selectedCocktail.ingredients">
-                  {{ ingredient }}
-                </li>
-              </ul>
-              <button (click)="closeCocktailDetails()">Fechar</button>
-            </div>
+      <div class="cocktail-details-container">
+        <div class="cocktail-details-content">
+          <img class="cocktail-image" [src]="selectedCocktail.strDrinkThumb" alt="Imagem do Cocktail">
+          <div class="cocktail-info">
+            <h2>{{ selectedCocktail.strDrink }}</h2>
+            <p>
+              <strong>Categoria:</strong> {{ selectedCocktail.strCategory }}
+            </p>
+            <p><strong>Tipo de Copo:</strong> {{ selectedCocktail.strGlass }}</p>
+            <p><strong>Álcool:</strong> {{ selectedCocktail.strAlcoholic }}</p>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li *ngFor="let ingredient of selectedCocktail.ingredients">
+                {{ ingredient }}
+              </li>
+            </ul>
+            <p><strong>Modo de Preparo:</strong></p>
+            <p>{{ selectedCocktail.strInstructions }}</p>
+            <p><strong>Última Modificação:</strong> {{ selectedCocktail.dateModified | date }}</p>
+            <button (click)="closeCocktailDetails()">Fechar</button>
           </div>
         </div>
       </div>
+    </div>    
   </body>
   

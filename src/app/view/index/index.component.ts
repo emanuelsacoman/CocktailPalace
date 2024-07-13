@@ -77,4 +77,5 @@ export class IndexComponent implements OnInit {
     }
     return ingredients;
   }
+  
 }

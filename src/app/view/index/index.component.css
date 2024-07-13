@@ -152,6 +152,7 @@ main{
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     color: #333;
+    width: 100vw;
   }
   
   .cocktail-details-content {
@@ -235,5 +236,11 @@ main{
     .cocktail-details-content {
         display: flex;
         flex-direction: column;
+      }
+    
+      .cocktail-image {
+        max-width: 300px; 
+        height: auto; 
+        margin-right: 0px;
       }
 }
