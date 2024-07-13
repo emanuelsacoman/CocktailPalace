@@ -25,6 +25,10 @@ export class IndexComponent implements OnInit {
     this.setMetaDescription(this.description);
   }
 
+  goToGithub(){
+    window.open('https://github.com/emanuelsacoman/Cocktail', '_blank');
+  }
+
   setDocTitle(title: string) {
     this.titleService.setTitle(title);
   }

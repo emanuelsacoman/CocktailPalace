@@ -161,7 +161,7 @@ main{
   
   .cocktail-image {
     max-width: 300px; 
-    height: auto; 
+    height: 100%; 
     margin-right: 20px;
   }
   
@@ -201,6 +201,19 @@ main{
     background-color: #45a049;
   }
   
+  .reserv{
+    display: flex;
+    justify-self: center;
+    color: #fff;
+
+    :is(p){
+        cursor: pointer;
+    }
+
+    :is(p):hover{
+        color: #f05464;
+    }
+  }
   
 
 @media screen and (max-width: 470px){

@@ -17,13 +17,14 @@
             </div>
           </ng-container>
         </div>
+        
       </main>       
     
     <!-- Detalhes do Cocktail -->
     <div class="cocktail-details" *ngIf="selectedCocktail">
       <div class="cocktail-details-container">
         <div class="cocktail-details-content">
-          <img class="cocktail-image" [src]="selectedCocktail.strDrinkThumb" alt="Imagem do Cocktail">
+          <img class="cocktail-image" [src]="selectedCocktail.strDrinkThumb" alt="Imagem do Drink">
           <div class="cocktail-info">
             <h2>{{ selectedCocktail.strDrink }}</h2>
             <p>
@@ -44,6 +45,12 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>   
+    
+    <section class="reserv">
+      <p (click)="goToGithub()">
+        ©️ 2024 Todos os Direitos Reservados por Emanuel Vinícius Sacoman
+      </p>
+    </section>
   </body>
   
