@@ -1,8 +1,45 @@
 body{
     background-color: #606060;
     min-height: 90vh;
-    padding: 1.3rem;
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+    color: #e4e8eb;
+}
+
+.principal{
+    height: 100%;
+    width: fit-content;
+    position: absolute;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 10%;
+    top: 25%;
+
+    .title{
+        font-size: 3rem;
+        :is(span){
+            color: #f05464;
+            text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+        }
+    }
+
+    .bar{
+        height: 0.6rem;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #f05464;
+    }
+
+    .description{
+        font-size: 1.7rem;
+    }
 }

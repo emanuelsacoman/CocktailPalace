@@ -5,7 +5,7 @@
 <body>
     <section class="desktop">
         <div class="left">
-            <img src="./assets/img/drink.png" alt="Logo">
+            <img src="./assets/img/drink.png" alt="Logo" (click)="home()">
         </div>
         <div class="right">
             <p (click)="home()">HOME</p>
@@ -20,7 +20,7 @@
 
     <section class="mobile">
         <div class="left">
-            <img src="./assets/img/drink.png" alt="Logo">
+            <img src="./assets/img/drink.png" alt="Logo" (click)="home()">
         </div>
         <div class="all">
             <img (click)="toggleItems()" [src]="showItems ? './assets/img/close.png' : './assets/img/interface.png'">
