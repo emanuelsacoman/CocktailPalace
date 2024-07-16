@@ -9,19 +9,23 @@ body{
 
 .principal{
     height: 100%;
-    width: fit-content;
     position: absolute;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .all{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 10%;
-    top: 25%;
+    top: 20%;
+    width: fit-content;
+    left: 5%;
 
     .title{
-        font-size: 3rem;
+        font-size: clamp(0.7rem, 4vw, 3rem);
         :is(span){
             color: #f05464;
             text-shadow: 
@@ -40,6 +44,6 @@ body{
     }
 
     .description{
-        font-size: 1.7rem;
+        font-size: clamp(0.6rem, 3vw, 1.7rem);
     }
 }
