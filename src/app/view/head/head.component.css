@@ -29,6 +29,7 @@ body{
     display: flex;
     align-items: center;
     gap: 2vw;
+    z-index: 99;
 
     :is(p){
         cursor: pointer;
@@ -133,7 +134,7 @@ body{
         border: none;
         cursor: pointer;
         width: 100%;
-        padding: 2px;
+        padding: 0px;
         border-radius: 0;
         display: flex;
         justify-content: center;
