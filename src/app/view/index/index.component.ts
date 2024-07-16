@@ -12,8 +12,8 @@ export class IndexComponent implements OnInit {
   cocktailToShow: any[] = [];
   selectedCocktail: any = null;
 
-  title = 'Cocktail Palace';
-  description = 'Tudo o que você precisa.';
+  title = 'Cocktail Palace | Cocktails';
+  description = 'Lista de receitas de cocktails.';
 
   constructor(private cocktailService: CocktailService,
               private titleService: Title,
