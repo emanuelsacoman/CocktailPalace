@@ -27,4 +27,8 @@ export class HomeComponent implements OnInit{
   setMetaDescription(description: string) {
     this.metaService.updateTag({ name: 'description', content: description });
   }
+
+  goToGithub(){
+    window.open('https://github.com/emanuelsacoman/Cocktail', '_blank');
+  }
 }
